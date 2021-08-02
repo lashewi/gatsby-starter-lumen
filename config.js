@@ -28,7 +28,7 @@ module.exports = {
       email: 'swisum@gmail.com',
       facebook: '',
       telegram: '',
-      twitter: 'lashewi',
+      twitter: '',
       github: 'lashewi',
       rss: '',
       vkontakte: '',
@@ -41,6 +41,7 @@ module.exports = {
       youtube: 'UC3aA-B4P5VrNvbLzwWG_aQQ',
       soundcloud: '',
       medium: '@lashewi',
+      stackoverflow: '9235482'
     }
   }
 };

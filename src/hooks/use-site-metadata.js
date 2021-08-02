@@ -28,6 +28,7 @@ const useSiteMetadata = () => {
                 weibo
                 codepen
                 soundcloud
+                stackoverflow
               }
             }
             menu {
