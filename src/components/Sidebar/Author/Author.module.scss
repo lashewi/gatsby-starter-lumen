@@ -29,6 +29,8 @@
 
   &__subtitle {
     color: $color-gray;
+    text-align: justify;
+    text-justify: inter-word;
     @include line-height(1);
     @include margin-bottom(1)
   }
