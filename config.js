@@ -23,7 +23,7 @@ module.exports = {
   author: {
     name: 'Lakshitha Wisumperuma',
     photo: '/photo.jpg',
-    bio: 'From moment and retrospect. Little bit of everything, every now and then. ',
+    bio: 'Traveler on a cosmic journey, swirling and dancing in the eddies and whirlpools of infinity. Code Alchemist by profession.',
     contacts: {
       email: 'swisum@gmail.com',
       facebook: '',
