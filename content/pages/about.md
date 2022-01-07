@@ -5,7 +5,7 @@ slug: about
 socialImage: /media/image-2.jpg
 draft: false
 ---
-Hi, Im a software Engineer from Sri Lanka.
+Hi, Im a software Engineer from Sri Lanka, Colomno.
 
 ![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
 
