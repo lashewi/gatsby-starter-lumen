@@ -6,7 +6,7 @@ socialImage: /media/image-4.jpg
 draft: false
 date: 2022-01-10T14:37:06.164Z
 description: Documenting starts here.
-category: Software Engineering
+category: Life Story
 tags:
   - Random
 ---
