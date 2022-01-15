@@ -5,7 +5,11 @@ slug: hello-there
 socialImage: /media/image-4.jpg
 draft: false
 date: 2022-01-10T14:37:06.164Z
-description: Documenting starts here.
+description: From WordPress, Medium to deploying my own blog site. Why? Two
+  reasons, I need a space where I can rant about software engineering, but about
+  other exciting things I learn through life that I thought would be better to
+  be shared with the world. Secondly, to micro-manage certain aspects and to get
+  the experience. Playground.
 category: Life Story
 tags:
   - Random
@@ -18,4 +22,3 @@ This may be my last article or the first of many to come on this platform. Still
 
 Documenting starts here.
 
-![]( "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.")
