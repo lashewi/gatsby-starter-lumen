@@ -3,7 +3,7 @@ template: post
 title: Storing Currency Values and Float Precision
 slug: Preserve precision with Numeric values
 socialImage: /media/michal-matlon-4apmfdvo32q-unsplash.jpg
-draft: true
+draft: false
 date: 2022-03-23T15:50:10.187Z
 description: Long ago, when I was a junior developer, I was going through a DB
   schema, and noted currency values are stored in Integers, and every value is
@@ -61,7 +61,6 @@ We expected 2 but got 2.1999999999999997 . Now we have an issue in our hands; i
 Okay, why does that happen? Before I point you down to the solution, something you need to know is
 Floats were according to[ IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) always binary
 
-
 The term "float" refers to the decimal point 'floats'. For instance, the following are all different exponents with the same whole number:
 
 1. 10.25 is 1025 x 10<sup>(-2)</sup>
@@ -69,7 +68,7 @@ The term "float" refers to the decimal point 'floats'. For instance, the followi
 
 But I said floats were binary, right? Yes, computers think in binary. So it's something like
 
-1. 10.25 is 164 x 2^<sup>(-4)</sup> which is 10.25
+1. 10.25 is 164 x 2<sup>(-4)</sup> which is 10.25
 2. 0.15 is 168884986026394 x 2<sup>(-50)</sup> which is close to 0.15
 
 Computers use binary numbers because they're faster at dealing with those and because for most calculations, a tiny error in most cases can be ignored. One other important thing to be mentioned is it's not due to binary. Base 10 suffers the same for an instant can we accurately represent a number like (1/3)? You have to round to something like 0.33, and still, you don't expect 0.33 + 0.33 + 0.33 to add up to 1, right?
@@ -82,8 +81,7 @@ Extracted from [Wikipedia](https://en.wikipedia.org/wiki/Floating-point_arithmet
 >
 >  e = −4; s = 1100110011001100110011001100110011…,
 >
->  where, as previously, s is the significand and e is the exponent.
->  When rounded to 24 bits this becomes
+>  where, as previously, s is the significand and e is the exponent. When rounded to 24 bits this becomes
 >
 >  e = −4; s = 110011001100110011001101,
 >
