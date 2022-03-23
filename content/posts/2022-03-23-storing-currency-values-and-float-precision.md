@@ -3,7 +3,7 @@ template: post
 title: Storing Currency Values and Float Precision
 slug: Preserve precision with Numeric values
 socialImage: /media/michal-matlon-4apmfdvo32q-unsplash.jpg
-draft: true
+draft: false
 date: 2022-03-23T15:50:10.187Z
 description: Long ago, when I was a junior developer, I was going through a DB
   schema, and noted currency values are stored in Integers, and every value is
