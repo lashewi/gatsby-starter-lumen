@@ -107,3 +107,11 @@ So let's sum it up. In short, the result of a floating-point calculation must of
    I'm just going to throw this out to the list just for the sake of it, You can use VARCHAR to store exact representations, but one significant takeaway apart from the obvious is it takes more bytes to store a number a string. And any arithmetic you do on the value will convert it to a number anyway.
 
    Alright, we discussed the float precision issue. We discussed the currency data types. The objective is done. Have a great day all.
+
+
+
+### References
+
+1. IEEE 754 — Wikipedia, <https://en.wikipedia.org/wiki/IEEE_754>
+2. Floating-point arithmetic — Wikipedia, <https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers.2C_conversion_and_rounding>
+3. DECIMAL Data Type Characteristics — MySQL, <https://dev.mysql.com/doc/refman/8.0/en/precision-math-decimal-characteristics.html>
