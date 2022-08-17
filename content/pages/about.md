@@ -5,8 +5,8 @@ slug: about
 socialImage: /media/image-2.jpg
 draft: false
 ---
-Hi, Im a software Engineer from Sri Lanka.
+Hi, I'm a Software Engineer from Sri Lanka.
 
-This is my personal website where I am going to share my knowledge about software development, things I learn and I'm passionate about. I hope you will enjoy your time here. 🙂
+This is my personal website where I am going to share my knowledge about software development, things I learn and I'm passionate about. I hope you will enjoy your time here. Use the navigation bar to redirect to Medium where you can find my old articles. 🙂
 
 ![](/media/image-2.jpg)
