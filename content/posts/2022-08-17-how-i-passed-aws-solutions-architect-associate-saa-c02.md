@@ -5,8 +5,9 @@ slug: How I Passed AWS Solutions Architect Associate (SAA-C02)
 socialImage: https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png
 draft: false
 date: 2022-08-17T15:39:12.074Z
-description: Two months ago, I wanted to complete the SAA-C02 exam and I set
-  myself up with a goal. The following note is about how I tackled it.
+description: Two months ago, I set a goal for myself to complete the SAA-C02
+  exam. The following is a note about how I passed the SAA-C02 on the first try
+  within a month.
 category: Cloud
 tags:
   - aws
