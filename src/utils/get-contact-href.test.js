@@ -19,4 +19,5 @@ test('getContactHref', () => {
   expect(getContactHref('soundcloud', '#')).toBe('https://soundcloud.com/#');
   expect(getContactHref('medium', '#')).toBe('https://medium.com/#');
   expect(getContactHref('stackoverflow', '#')).toBe('https://stackoverflow.com/users/#');
+  expect(getContactHref('goodreads', '#')).toBe('https://www.goodreads.com/user/show/#');
 });

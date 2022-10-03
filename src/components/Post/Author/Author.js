@@ -5,9 +5,9 @@ import styles from './Author.module.scss';
 import { useSiteMetadata } from '../../../hooks';
 
 const Author = () => {
-    const { author } = useSiteMetadata();
+  const { author } = useSiteMetadata();
 
-    return ( <
+  return (<
         div className = { styles['author'] } >
         <
         p className = { styles['author__bio'] } > { author.bio } <
@@ -20,7 +20,7 @@ const Author = () => {
         /a> <
         /p> <
         /div>
-    );
+  );
 };
 
 export default Author;

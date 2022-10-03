@@ -56,6 +56,9 @@ const getIcon = (name: string) => {
     case 'stackoverflow':
       icon = ICONS.STACKOVERFLOW;
       break;
+    case 'goodreads':
+      icon = ICONS.GOODREADS;
+      break;
     default:
       icon = {};
       break;

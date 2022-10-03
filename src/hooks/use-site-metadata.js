@@ -29,6 +29,7 @@ const useSiteMetadata = () => {
                 codepen
                 soundcloud
                 stackoverflow
+                goodreads
               }
             }
             menu {

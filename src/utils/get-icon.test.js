@@ -20,4 +20,5 @@ test('getIcon', () => {
   expect(getIcon('soundcloud')).toEqual(ICONS.SOUNDCLOUD);
   expect(getIcon('medium')).toEqual(ICONS.MEDIUM);
   expect(getIcon('stackoverflow')).toEqual(ICONS.STACKOVERFLOW);
+  expect(getIcon('goodreads')).toEqual(ICONS.GOODREADS);
 });
