@@ -5,14 +5,14 @@ slug: Preserve precision with Numeric values
 socialImage: /media/michal-matlon-4apmfdvo32q-unsplash.jpg
 draft: false
 date: 2022-03-23T15:50:10.187Z
-description: Long ago, when I was a junior developer, I was going through a DB
-  schema, and noted currency values are stored in Integers, and every value is
-  multiplied by 100. This was a fascinating approach, and I started digging. It
-  was fascinating back then because I thought we could use something like Float
-  type to store this without multiplication or division hackle. This article is
-  about that; I will tell you why we tend to move away from Float and Double and
-  look into cleaner solutions. This is a fundamental approach to consider. Okay,
-  let's dive into it.
+description: When I was a junior developer, I was going through a database
+  schema and noticed that currency values are stored in Integers and that each
+  value is multiplied by 100. This was an intriguing approach, and I began to
+  investigate. It was fascinating back then because I thought we could use a
+  type like a Float to store this without having to use multiplication or
+  division hackle. This article will explain why we tend to avoid Float and
+  Double in favor of cleaner solutions. This is an important approach to think
+  about. So, let's get started.
 category: Software Engineering
 tags:
   - SoftwareEngineering
