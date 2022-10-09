@@ -18,13 +18,18 @@ Why is data immutable? What are we attempting to solve by making data immutable?
 Let's have a look at an example.
 
 ```
+var mutableArray = ["Element 01", "Element 02", "Element 03", "Element 04", "Element 05"];
 
+console.log("Initial array : " + mutableArray)
+mutableArray.shift()
+console.log("Array after shift action : " + mutableArray)
 ```
 
  output:
 
 ```
-
+"Initial array : Element 01,Element 02,Element 03,Element 04,Element 05"
+"Array after shift action : Element 02,Element 03,Element 04,Element 05"
 ```
 
 You do not need to grasp Javascript syntax. It is more important that you grasp the distinctions between mutable and immutable languages than the specifics of this example.
@@ -34,13 +39,19 @@ We're assigning 5 strings to the variable mutableArray above. Then we execute th
 Now let's look at some Elixir code:
 
 ```
+immutable_array = ["Element 01", "Element 02", "Element 03", "Element 04", "Element 05"]
+
+IO.puts(["Initial array : ", Enum.join(immutable_array, ", ")])  
+Enum.slice(immutable_array, 4, 2)
+IO.puts(["Array after slice action : ", Enum.join(immutable_array, ", ")])  
 
 ```
 
 o﻿utput:
 
 ```
-
+Initial array : Element 01, Element 02, Element 03, Element 04, Element 05
+Array after slice action : Element 01, Element 02, Element 03, Element 04, Element 05
 ```
 
 In contrast, immutable data has no side effects- no matter what you call an array with 5 items, it will always be an array with 5 things.
