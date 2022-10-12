@@ -5,14 +5,14 @@ slug: Preserve precision with Numeric values
 socialImage: /media/michal-matlon-4apmfdvo32q-unsplash.jpg
 draft: false
 date: 2022-03-23T15:50:10.187Z
-description: When I was a junior developer, I was going through a database
+description: When I was a junior developer, I was looking through a database
   schema and noticed that currency values are stored in Integers and that each
   value is multiplied by 100. This was an intriguing approach, and I began to
-  investigate. It was fascinating back then because I thought we could use a
+  look into it. It was fascinating back then because I thought we could use a
   type like a Float to store this without having to use multiplication or
-  division hackle. This article will explain why we tend to avoid Float and
-  Double in favor of cleaner solutions. This is an important approach to think
-  about. So, let's get started.
+  division hackle. This article will explain why we avoid Float and Double in
+  favor of cleaner solutions. This is an important strategy to consider. So,
+  let's get started.
 category: Software Engineering
 tags:
   - SoftwareEngineering
@@ -20,22 +20,21 @@ tags:
   - MySQL
   - Database
 ---
-Before getting started with the article, let me iterate the content. This article's main objective is to discuss how currency values can be stored in Databases (MySQL). My other main focus is to explain the inaccuracy with float values. Now that we have straightened out the scope let's get started with the much-needed introduction.
-Long ago, when I was a junior developer, I was going through a DB schema, and noted currency values are stored in Integers, and every value is multiplied by 100. This was a fascinating approach, and I started digging. It was fascinating back then because I thought we could use something like Float type to store this without multiplication or division hackle. This article is about that; I will tell you why we tend to move away from Float and Double and look into cleaner solutions. This is a fundamental approach to consider. Okay, let's dive into it.
-The requirement is pretty straightforward. We need to store currency value in our database or a numeric value where precision matters. The approaches or solutions provided below use MySQL, and coding is made through Java, but I hope the fundamentals will make sense to you nonetheless. One other small note: Some relational databases support a Money type like Postgress, but we will focus only on MySQL to keep this simple.
-Let's evaluate the data types we can consider to store currency values:
+Let me iterate the content before we begin. The main goal of this article is to discuss how currency values can be stored in databases (MySQL). My secondary goal is to explain the inaccuracy with float values. Now that we've clarified the scope, let's get started
+The requirement is straightforward. In our database, we must store currency values or numeric values where precision is critical. The approaches or solutions provided below use MySQL, and the coding is done in Java, but I hope the fundamentals are clear to you. Another quick note: Some relational databases, such as Postgres, support a Money type, but we'll stick to MySQL to keep things simple.
+Let's look at the different data types that can be used to store currency values:
 
 1. [Float / Double](https://dev.mysql.com/doc/refman/8.0/en/floating-point-types.html)
 2. [Decimal / Numeric](https://dev.mysql.com/doc/refman/8.0/en/fixed-point-types.html)
 3. [Bigint / Integer](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html)
 4. [Varchar / String ](https://dev.mysql.com/doc/refman/8.0/en/char.html)
 
-Alright, we have our leading solutions listed down. To be clear, I listed them not by a specific data type. As you can see, consider Float and Double, while those are two different data types (Double stores double-precision floating-point number values), which brings to the table under this topic is pretty straightforward. Here comes the exciting stuff.
+Okay, we've compiled a list of our top solutions. To be clear, I did not list them by data type. As you can see, Float and Double are two distinct data types (Double stores double-precision floating-point number values), but what they bring to the table under this topic is fairly straightforward. Now comes the exciting part.
 
 ## Float / Double
 
-If precision is one of your requirements, this may be a no; why the word maybe? Not always; I'll explain that. However, it's recommended to avoid this data type to save currency values. Why float and decimal are not precise, as you might believe?
-Let's look into this small code snippet,
+If precision is a requirement, this may be a no; why maybe?  let me explain. It is advised to avoid using this data type to save currency values. Why are float and double not as precise as you might think?
+Let's take a look at this small code snippet.
 
 ```java
 class HelloWorld {
@@ -71,9 +70,9 @@ But I said floats were binary, right? Yes, computers think in binary. So it's so
 1. 10.25 is 164 x 2<sup>(-4)</sup> which is 10.25
 2. 0.15 is 168884986026394 x 2<sup>(-50)</sup> which is close to 0.15
 
-Computers use binary numbers because they're faster at dealing with those and because for most calculations, a tiny error in most cases can be ignored. One other important thing to be mentioned is it's not due to binary. Base 10 suffers the same for an instant can we accurately represent a number like (1/3)? You have to round to something like 0.33, and still, you don't expect 0.33 + 0.33 + 0.33 to add up to 1, right?
+Computers use binary numbers because they are faster at dealing with them and because a small error can usually be ignored in most calculations. Another important point to note is that it is not due to binary. For example, can we accurately represent a number like (1/3) in Base 10? You have to round to something like 0.33, and you don't expect 0.33 + 0.33 + 0.33 to equal 1.
 
-Okay, now to the explanation, I'm just going to copy-paste the answer, which explains the whole thing flawlessly.
+Okay, now for the explanation. I'm just going to copy-paste the answer, which perfectly explains everything.
 
 Extracted from [Wikipedia](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers.2C_conversion_and_rounding):
 
@@ -89,26 +88,21 @@ Extracted from [Wikipedia](https://en.wikipedia.org/wiki/Floating-point_arithmet
 
    Float uses 24-bit for its "mantissa", which holds all the significant digits. This means it has about seven digits of precision (as 2^(24) is about 16 million), and Double uses 53-bit for its "mantissa", so it can hold about 16 digits accurately.
 
-So let's sum it up. In short, the result of a floating-point calculation must often be rounded to fit back into its finite representation. This rounding error is the characteristic feature of floating-point computation. Suppose you are looking to do a certain level of complex multiplication. This will affect your calculation flow and final values unless taken care of (it's not only in multiplication, other arithmetic operations will have the same effect, but on a lesser scale for obvious reasons). 
+To summarise, the result of a floating-point calculation is frequently rounded in order to fit back into its finite representation. This rounding error is a defining characteristic of floating-point computation. Assume you want to perform a certain level of complex multiplication,  This will have an impact on your calculation flow and final values if not addressed (this is not limited to multiplication; other arithmetic operations will have the same effect, although on a smaller scale for obvious reasons).
 
 ## Decimal / Numeric
 
-   This is one of the better ways or solves a general need of saving currency values without any loss. 
-   It's pretty straightforward.
-   decimal(15,2)
-   15 is the precision (total length of value including decimal places), and 2 is the number of digits after the decimal point; of course, you can define length and precision to fit your requirements. Suppose your application needs to handle money values up to a trillion. In that case, this should work: 13,2 and If you need to comply with GAAP (Generally Accepted Accounting Principles), then use 4 for precision like 13,4.
+This is one of the better ways to save currency values without incurring any losses. It's not difficult to understand. Decimal(15,2) 15 is the precision (total length of value including decimal places), and 2 is the number of digits after the decimal point; of course, length and precision can be defined to meet your needs. Assume your application must handle money values up to a trillion dollars. In that case, the following should work: 13,2 and If you must adhere to GAAP (Generally Accepted Accounting Principles), use 4 for precision, such as 13,4.
 
 ## BigInt / Integer
 
-   Here is another approach, storing as an integer. The only takeaway is you have to do a calculation. Why? Because there are no decimal places, you will have to store the values by multiplying with 100 or 1000, depending on the precision you are aiming for. The signed range of integer (INT) is from -2147483648 to 2147483647, and the unsigned range is from 0 to 4294967295. You can specify signed or unsigned int in the column definition. While for Bigint, the signed range is -9223372036854775808 to 9223372036854775807, and the unsigned range takes a positive value. The range of unsigned is 0 to 18446744073709551615. You can find more details on MySQL Documentation. This will be sufficient for general level business applications to store currency values but take away is imposing an extra burden on handling fractional values. Not recommended, but it depends on your requirements and feasibly, which applies to every solution I have listed here.
+Another method is to store it as an integer. The only takeaway is that you must perform a calculation. Why? Because there are no decimal places, you must store the values by multiplying by 100 or 1000, depending on the level of precision desired. Integer (INT) has a signed range of -2147483648 to 2147483647 and an unsigned range of 0 to 4294967295. In the column definition, you can specify whether the int is signed or unsigned. The signed range for Bigint is -9223372036854775808 to 9223372036854775807, and the unsigned range is positive. Unsigned has a value range of 0 to 18446744073709551615. More information is available in the MySQL Documentation. This is sufficient for general-purpose business applications to store currency values, but it imposes an additional burden when dealing with fractional values. Not recommended, but it depends on your needs and feasibility, which applies to all of the solutions I've listed here.
 
 ## VARCHAR
 
-   I'm just going to throw this out to the list just for the sake of it, You can use VARCHAR to store exact representations, but one significant takeaway apart from the obvious is it takes more bytes to store a number a string. And any arithmetic you do on the value will convert it to a number anyway.
+I'm just going to add this to the list for the sake of completeness: You can use VARCHAR to store exact representations, but one important takeaway aside from the obvious is that it takes more bytes to store a number as a string. And any arithmetic on the value will always convert it to a number.
 
-   Alright, we discussed the float precision issue. We discussed the currency data types. The objective is done. Have a great day all.
-
-
+Okay, we talked about the float precision issue. We talked about the various currency data types. The goal has been met. Everyone have a wonderful day.
 
 ### References
 
