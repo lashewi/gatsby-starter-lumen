@@ -44,7 +44,6 @@ immutable_array = ["Element 01", "Element 02", "Element 03", "Element 04", "Elem
 IO.puts(["Initial array : ", Enum.join(immutable_array, ", ")])  
 Enum.slice(immutable_array, 4, 2)
 IO.puts(["Array after slice action : ", Enum.join(immutable_array, ", ")])  
-
 ```
 
 o﻿utput:
@@ -54,9 +53,7 @@ Initial array : Element 01, Element 02, Element 03, Element 04, Element 05
 Array after slice action : Element 01, Element 02, Element 03, Element 04, Element 05
 ```
 
-In contrast, immutable data has no side effects- no matter what you call an array with 5 items, it will always be an array with 5 things.
-
-Simply prevent values in a certain memory area from changing. Never. Until the variable is trash collected or no longer exists.
+In contrast, immutable data has no side effects, no matter what you call an array with 5 elements, it will always be an array with 5 elements. Simply put, it prevent values in a certain memory area from changing. Never. Until the variable is trash collected or no longer exists. 
 
 If you want to learn more about the topic, Id recommend [Are We There Yet presentation by Rich Hickey](https://youtu.be/ScEPu1cs4l0)
 
