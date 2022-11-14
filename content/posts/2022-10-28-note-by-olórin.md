@@ -1,6 +1,6 @@
 ---
 template: post
-title: A Note by Olórin
+title: "A Note by Olórin: Technical Debt"
 slug: Love your code
 socialImage: /media/gandalf-the-pug-3-1920×1080.jpg
 draft: false
