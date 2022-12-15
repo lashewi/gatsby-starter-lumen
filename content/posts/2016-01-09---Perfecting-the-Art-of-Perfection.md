@@ -10,7 +10,7 @@ description: From WordPress, Medium to deploying my own blog site. Why? Two
   other exciting things I learn through life that I thought would be better to
   be shared with the world. Secondly, to micro-manage certain aspects and to get
   the experience. Playground.
-category: Life Story
+category: Life
 tags:
   - Random
 ---
