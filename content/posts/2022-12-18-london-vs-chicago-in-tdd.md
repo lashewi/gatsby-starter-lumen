@@ -6,13 +6,9 @@ slug: Let's begin by defining the terms used in this topic. On Test Driven
 socialImage: /media/pexels-dominika-gregušová-672532.jpg
 draft: false
 date: 2022-12-18T13:25:06.626Z
-description: Let's begin by defining the terms used in this topic. On Test
-  Driven Development (TDD), there are two schools of thought. **London style**,
-  also known as Mockist Style, Top-Down, or Outside-In, is about working from
-  the outside of the application inward to the lower layers. **Chicago Style**,
-  also known as Detroit, Classic school, Bottom-Up, or Inside-Out, is
-  characterised by starting from the inside of the application (usually the
-  domain) and working outward to the APIs.
+description: |-
+  A Note by Olórin is an article series based on my Engineering journey.
+  A Note by Olórin: London vs Chicago in TDD
 category: SOFTWARE ENGINEERING
 tags:
   - TDD
