@@ -3,7 +3,7 @@ template: post
 title: Leaving Rootcode After Two Years
 slug: A Place to Be
 socialImage: /media/294492362_1377100992799525_7954476276110358488_n.jpg
-draft: true
+draft: false
 date: 2023-01-08T11:38:28.711Z
 description: Last December was a very emotional day for me as I was bidding
   farewell to an organization that had presented me with tremendous
