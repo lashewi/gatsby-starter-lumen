@@ -9,7 +9,7 @@ date: 2022-12-18T13:25:06.626Z
 description: |-
   A Note by Olórin is an article series based on my Engineering journey.
   A Note by Olórin: London vs Chicago in TDD
-category: SOFTWARE ENGINEERING
+category: software engineering
 tags:
   - TDD
   - Engineering
