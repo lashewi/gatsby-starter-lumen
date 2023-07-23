@@ -8,7 +8,7 @@ date: 2022-08-17T15:39:12.074Z
 description: Two months ago, I set a goal for myself to complete the SAA-C02
   exam. The following is a note about how I passed the SAA-C02 on the first try
   within a month.
-category: Cloud
+category: cloud, software engineering
 tags:
   - aws
   - cloud
