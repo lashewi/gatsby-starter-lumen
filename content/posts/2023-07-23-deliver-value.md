@@ -14,7 +14,7 @@ description: Meta’s recent release of Threads has been a remarkable success,
   fact that Meta released Threads as a Minimum Viable Product (MVP) which is
   still in its infancy, seeking to understand its relevance in the ever-evolving
   internet landscape.
-category: Software Engineering
+category: software engineering
 tags:
   - Technology
   - Startup
