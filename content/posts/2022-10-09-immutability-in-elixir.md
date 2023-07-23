@@ -9,7 +9,7 @@ description: Objects are not supported in Elixir because it is a functional
   language. Furthermore, the concept of immutability is heavily emphasized
   within the Elixir language. Instead of altering data, transformations are used
   in Elixir.
-category: Software Engineering
+category: software engineering
 tags:
   - Elixir
 ---
