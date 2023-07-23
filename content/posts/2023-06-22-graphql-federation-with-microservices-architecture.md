@@ -6,7 +6,7 @@ socialImage: /media/0_dvg8k-wtsfrd6x20.jpg
 draft: false
 date: 2023-06-22T13:18:14.747Z
 description: Introducing GraphQL Federation to Microservices Architecture
-category: SOFTWARE ENGINEERING
+category: software engineering
 ---
 ## Introduction
 
