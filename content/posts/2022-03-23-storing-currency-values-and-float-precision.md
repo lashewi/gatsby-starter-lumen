@@ -13,7 +13,7 @@ description: When I was a junior developer, I was looking through a database
   division hackle. This article will explain why we avoid Float and Double in
   favor of cleaner solutions. This is an important strategy to consider. So,
   let's get started.
-category: Software Engineering
+category: software engineering
 tags:
   - SoftwareEngineering
   - Java
