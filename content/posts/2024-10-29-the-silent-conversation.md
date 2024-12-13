@@ -2,7 +2,7 @@
 template: post
 title: The Silent Conversation
 slug: The Silent Conversation
-socialImage: /media/frank-mckenna-exheq48z-q4-unsplash.jpg
+socialImage: /media/wallhaven-od2j2l.jpg
 draft: false
 date: 2024-10-29T16:04:39.138Z
 description: Traditional Náhuatl Prayer (fragment)
